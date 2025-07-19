@@ -7,7 +7,7 @@ This guide helps you configure Postman to test Laravel Sanctum's SPA authenticat
 ## ✅ 1. Import the Collection
 
 Import your Postman collection to get started.  
-![Collection Screenshot](#)
+![Collection Screenshot](https://maikeru-desu.quest/sanctum-postman/1_create_collection.png)
 
 ---
 
@@ -20,14 +20,14 @@ base_url = http://localhost:8000
 frontend_url = http://localhost:5173
 ```
 
-![Environment Screenshot](#)
+![Environment Screenshot](https://maikeru-desu.quest/sanctum-postman/2_create_environments.png)
 
 ---
 
 ## 📁 3. Organize Routes
 
 Create a folder inside your collection and name it something like `Authentication` (or any name you prefer).  
-![Folder Screenshot](#)
+![Folder Screenshot](https://maikeru-desu.quest/sanctum-postman/3_authentication_folder.png)
 
 ---
 
@@ -38,7 +38,8 @@ Inside your `Authentication` folder, create two requests:
 - `GET` request to `/sanctum/csrf-cookie`
 - `POST` request to `/login` with appropriate credentials in the body
 
-![Routes Screenshot](#)
+![Routes Screenshot](https://maikeru-desu.quest/sanctum-postman/4_add_csrf_cookie_route.png)
+![Routes Screenshot](https://maikeru-desu.quest/sanctum-postman/4_add_login_route.png)
 
 ---
 
@@ -68,7 +69,7 @@ jar.get(pm.environment.get('frontend_url'), "XSRF-TOKEN",  (err, cookie) => {
 - Adds it as a header (`X-XSRF-TOKEN`) to your request.
 - Sets the `Referer` header — both are required for Sanctum to validate the request.
 
-![Pre-request Script Screenshot](#)
+![Pre-request Script Screenshot](https://maikeru-desu.quest/sanctum-postman/5_add_script_pre_request.png)
 
 ---
 
